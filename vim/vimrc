@@ -40,7 +40,7 @@ nmap gd         <Plug>(coc-definition)
 nmap gl         <Plug>(coc-declaration)     
 nmap gr         <Plug>(coc-references)     
 nmap <leader>f  <Plug>(coc-format-selected)
-nmap <F8>       <Plug>(coc-diagnostic-next)
+nmap e8         <Plug>(coc-diagnostic-next)
 nmap <S-F8>     <Plug>(coc-diagnostic-prev-error)
 nmap <leader>qf <Plug>(coc-fix-current)
 nmap gh         :call CocAction('doHover') <CR>
