@@ -1,0 +1,77 @@
+set encoding=utf-8
+set backspace=2		
+set autoindent
+set smartindent
+set expandtab
+set shiftwidth=4
+set tabstop=4
+set expandtab
+set modelines=0		
+set cursorline
+set cursorcolumn
+" hybrid absolute and relative line number
+set nu rnu
+set foldmethod=indent
+set helpheight=40
+set background=dark
+
+colorscheme zellner
+
+syntax on
+filetype on
+
+autocmd! bufwritepost vimrc source ~/.dotfile/vim/vimrc
+
+
+let mapleader= '\'
+map <F5> :call Compile()<CR>
+map <F6> :call Run()<CR>
+map <F7> :call Debug()<CR>
+
+
+nmap <silent> <leader>ee :e ~/.dotfile/vim/vimrc <CR>
+nmap <silent> <leader>ep :e ~/.dotfile/vim/preference/plugin.vim <CR>
+
+nmap <leader>w :w<CR>
+nmap <leader>c :call Compile()<CR><CR>:call Run()<CR>
+
+nmap gi         <Plug>(coc-implementation)
+nmap gd         <Plug>(coc-definition)
+nmap gl         <Plug>(coc-declaration)     
+nmap gr         <Plug>(coc-references)     
+nmap <leader>f  <Plug>(coc-format-selected)
+nmap <F8>       <Plug>(coc-diagnostic-next)
+nmap <S-F8>     <Plug>(coc-diagnostic-prev-error)
+nmap <leader>qf <Plug>(coc-fix-current)
+nmap gh         :call CocAction('doHover') <CR>
+nmap <C-S-i>    :call CocAction('format') <CR>
+
+nnoremap tn :tabNext<CR>
+nnoremap tp :tabp<CR>
+
+
+
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+"autocmd FileType c ClangFormatAutoEnabl
+"autocmd FileType cpp ClangFormatAutoEnable
+
+
+call plug#begin('~/.vim/plugged')
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'preservim/nerdtree'
+    Plug 'rhysd/vim-clang-format'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    Plug 'christoomey/vim-tmux-navigator'
+    Plug 'tpope/vim-fugitive'
+    Plug 'chr4/nginx.vim'
+call plug#end()
+
+source ~/.dotfile/vim/preference/plugin.vim
+source ~/.dotfile/vim/preference/misc.vim
+
+
+
+let g:airline_theme='onedark'
+
+

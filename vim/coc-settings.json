@@ -1,0 +1,61 @@
+{
+    "coc.preferences.formatOnSaveFiletypes": [
+        "javascript",
+        "javascriptreact",
+        "css",
+        "scala",
+        "json",
+        "rust",
+        "go"
+    ],
+    "yaml.schemas": {
+        "http://publicstatic.cnworkshop.xyz/compose-spec.json": [
+            "docker-compose.yaml",
+            "docker-compose.yml"
+        ],
+        "http://publicstatic.cnworkshop.xyz/schema/v1.18.1-standalone-strict/all.json": "*.k8s.yml"
+    },
+    "yaml.completion": true,
+    "yaml.validate": true,
+    "yaml.trace.server": "verbose",
+    "diagnostic-languageserver.filetypes": {
+        "sh": "shellcheck"
+    },
+    "languageserver": {
+        "svls": {
+            "command": "svls",
+            "args": [
+                "-d"
+            ],
+            "rootPatterns": [
+                ".svls.toml"
+            ],
+            "filetypes": [
+                "verilog",
+                "systemverilog"
+            ]
+        },
+        "ccls": {
+            "command": "ccls",
+            "args": [
+                "-v=2"
+            ],
+            "filetypes": [
+                "cpp",
+                "c",
+                "cuda",
+                "objc",
+                "objcpp"
+            ],
+            "rootPatterns": [
+                ".ccls",
+                "compile_commands.json"
+            ],
+            "initializationOptions": {
+                "cache": {
+                    "directory": ".ccls-cache"
+                }
+            }
+        }
+    }
+}
