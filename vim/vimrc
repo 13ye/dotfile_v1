@@ -15,7 +15,8 @@ set foldmethod=indent
 set helpheight=40
 set background=dark
 
-colorscheme zellner
+"colorscheme zellner
+colorscheme desert
 
 syntax on
 filetype on
