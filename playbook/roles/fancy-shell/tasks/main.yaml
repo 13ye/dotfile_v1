@@ -8,6 +8,7 @@
       - build-essential
       - zsh
       - tmux
+      - rsync
 
 - name: make sure we have folder to store vim-plug
   file:
