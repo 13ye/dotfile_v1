@@ -17,3 +17,6 @@ function k8s_delete_evicted {
     kubectl get pods -n $1| grep Evicted | tr -s ' ' | cut -d ' ' -f 1 |xargs kubectl delete pods -n $1
 }
 
+#alias setproxy="export ALL_PROXY=socks5://ip:port"
+alias unsetproxy="unset ALL_PROXY"
+alias ips="curl cip.cc"
