@@ -5,7 +5,7 @@
 
 - name: check if golang archive downloaded
   stat: 
-    path: ~/.bin/go
+    path: /usr/local/go
   register: go_exist
 
 - name: make sure golang_archive has directory
@@ -26,14 +26,14 @@
 
 - name: make sure directory to unarchive exists
   file:
-    path: ~/.bin/
+    path: /usr/local/
     state: directory
 
 - name: unarchive the golang file downloaded
   when: go_exist.stat.exists == false 
   unarchive: 
     src: "{{ go_destdir }}{{ go_artifact }}"
-    dest: ~/.bin/
+    dest: /usr/local/
 
 - name: set go_var gopath goproxy goroot
   lineinfile:
