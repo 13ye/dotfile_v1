@@ -9,6 +9,7 @@
       - zsh
       - tmux
       - rsync
+      - unzip
 
 - name: make sure we have folder to store vim-plug
   file:
