@@ -10,6 +10,11 @@
       - tmux
       - rsync
       - unzip
+      - cloc
+      - tree
+      - htop
+      - telnet
+      - net-tools
 
 - name: make sure we have folder to store vim-plug
   file:

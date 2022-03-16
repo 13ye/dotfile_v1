@@ -16,7 +16,7 @@
     src: /tmp/nodejs.tar.xz
     dest: /opt/
     remote_src: true
-  
+
 - name: append extra config to zshrc
   when: not node_stat.stat.exists
   blockinfile:
