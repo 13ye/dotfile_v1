@@ -5,6 +5,7 @@ alias edit_zshrc="vim ~/.zshrc"
 alias vim=nvim
 alias vi=vim
 alias t='tmux new-session -A -s main'
+alias fn='find ./ -name'
 
 bindkey \"^P\" up-line-or-beginning-search
 bindkey \"^N\" down-line-or-beginning-search
