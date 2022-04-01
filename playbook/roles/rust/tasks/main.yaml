@@ -1,0 +1,16 @@
+- name: check if rust cargo exist
+  stat:
+    path: ~/.cargo/
+  register: rust_exist
+
+- name: rustup to install cargo and rust
+  when: rust_exist.stat.exists == false 
+  shell: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+- name: set cargo binary to the path
+  lineinfile:
+    state: present 
+    line: source ~/.dotfile/zsh/rust_cargo.env
+    dest: ~/.zshrc
+    create: yes
+
