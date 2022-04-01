@@ -6,6 +6,7 @@ alias vim=nvim
 alias vi=vim
 alias t='tmux new-session -A -s main'
 alias fn='find ./ -name'
+alias ga='git add'
 
 bindkey \"^P\" up-line-or-beginning-search
 bindkey \"^N\" down-line-or-beginning-search
