@@ -7,6 +7,8 @@ alias vi=vim
 alias t='tmux new-session -A -s main'
 alias fn='find ./ -name'
 alias ga='git add'
+alias dp='docker ps'
+alias dim='docker image'
 
 bindkey \"^P\" up-line-or-beginning-search
 bindkey \"^N\" down-line-or-beginning-search
