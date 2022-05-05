@@ -24,26 +24,8 @@
   copy:
     src: /opt/v2ray/systemd/system/v2ray.service/
     dest: /etc/systemd/network/
-    
+
 - name: enable service
   systemd:
     name: v2ray
     state: restarted
-    
-
-
-    
-    
-    
-
-
-  
-  
-
-
-
-
-      
-
-
-

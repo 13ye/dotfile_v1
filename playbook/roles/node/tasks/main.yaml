@@ -20,7 +20,7 @@
 - name: append extra config to zshrc
   when: not node_stat.stat.exists
   blockinfile:
-    state: present 
+    state: present
     marker: '#load nodejs path'
     block: |
       PATH=${PATH}:/opt/{{ node_file }}/bin/

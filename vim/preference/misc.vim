@@ -46,4 +46,3 @@ if exists("+showtabline")
 endif
 
 set tabline=%!MyTabLine()
-

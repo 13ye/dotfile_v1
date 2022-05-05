@@ -29,7 +29,7 @@
     dest: ~/.local/share/nvim/site/autoload/plug.vim
 
 - name: check if oh-my-zsh folder exists
-  stat: 
+  stat:
     path: ~/.oh-my-zsh
   register: zsh_stat
 
@@ -47,7 +47,7 @@
 
 - name: change zsh file content
   replace:
-    dest: ~/.zshrc 
+    dest: ~/.zshrc
     regexp: ^\s*plugins=(\(.*\))\s*$
     replace: plugins=(git vi-mode)
 
@@ -70,20 +70,20 @@
 
 - name: create tmux shimming conf
   lineinfile:
-    state: present 
+    state: present
     line: source-file ~/.dotfile/tmux/tmux.conf
     dest: ~/.tmux.conf
     create: yes
 
 - name: take care of nvim settings
   file:
-    path: ~/.config/nvim 
+    path: ~/.config/nvim
     state: directory
 
 
 - name: create nvim shimming conf
   lineinfile:
-    state: present 
+    state: present
     line: source ~/.dotfile/vim/vimrc
     dest: ~/.config/nvim/init.vim
     create: yes
@@ -96,14 +96,14 @@
 
 - name: create vim shimming conf
   lineinfile:
-    state: present 
+    state: present
     line: source ~/.dotfile/vim/vimrc
     dest: ~/.vimrc
     create: yes
 
 - name: append extra config to zshrc
   blockinfile:
-    state: present 
+    state: present
     marker: '#extra-zsh-config'
     block: |
       source ~/.dotfile/zsh/alias.zsh
@@ -117,7 +117,7 @@
 
 - name: download nvim
   when:
-    - ansible_system  == 'Linux' 
+    - ansible_system  == 'Linux'
     - is_nvim_exists.rc != 0
   get_url:
     dest: /tmp/nvim-linux64.tar.gz
@@ -126,7 +126,7 @@
 - name: unarchive nvim
   become: true
   when:
-    - ansible_system  == 'Linux' 
+    - ansible_system  == 'Linux'
     - is_nvim_exists.rc != 0
   unarchive:
     src: /tmp/nvim-linux64.tar.gz
@@ -136,12 +136,12 @@
 - name: install nvim
   become: true
   when:
-    - ansible_system  == 'Linux' 
+    - ansible_system  == 'Linux'
     - is_nvim_exists.rc != 0
   synchronize:
     src: /tmp/nvim-linux64/
     dest: /usr/local/
-  
+
 - name: link nvim
   become: true
   when:

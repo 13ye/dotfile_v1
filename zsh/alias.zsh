@@ -9,6 +9,7 @@ alias fn='find ./ -name'
 alias ga='git add'
 alias dp='docker ps'
 alias dim='docker image'
+alias dims='docker images'
 
 bindkey \"^P\" up-line-or-beginning-search
 bindkey \"^N\" down-line-or-beginning-search

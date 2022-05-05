@@ -4,7 +4,7 @@
 #  ignore_errors: yes
 
 - name: check if golang archive downloaded
-  stat: 
+  stat:
     path: /usr/local/go
   register: go_exist
 
@@ -14,7 +14,7 @@
     state: directory
 
 - name: check if golang archive already downloaded
-  stat: 
+  stat:
     path: "{{ go_destdir }}{{ go_artifact }}"
   register: goarchive_exist
 
@@ -30,15 +30,14 @@
     state: directory
 
 - name: unarchive the golang file downloaded
-  when: go_exist.stat.exists == false 
-  unarchive: 
+  when: go_exist.stat.exists == false
+  unarchive:
     src: "{{ go_destdir }}{{ go_artifact }}"
     dest: /usr/local/
 
 - name: set go_var gopath goproxy goroot
   lineinfile:
-    state: present 
+    state: present
     line: source ~/.dotfile/zsh/golang.env
     dest: ~/.zshrc
     create: yes
-

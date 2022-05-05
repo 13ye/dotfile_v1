@@ -1,12 +1,12 @@
 set encoding=utf-8
-set backspace=2		
+set backspace=2
 set autoindent
 set smartindent
 set expandtab
 set shiftwidth=4
 set tabstop=4
 set expandtab
-set modelines=0		
+set modelines=0
 set cursorline
 set cursorcolumn
 " hybrid absolute and relative line number
@@ -38,8 +38,8 @@ nmap <leader>c :call Compile()<CR><CR>:call Run()<CR>
 
 nmap gi         <Plug>(coc-implementation)
 nmap gd         <Plug>(coc-definition)
-nmap gl         <Plug>(coc-declaration)     
-nmap gr         <Plug>(coc-references)     
+nmap gl         <Plug>(coc-declaration)
+nmap gr         <Plug>(coc-references)
 nmap <leader>f  <Plug>(coc-format-selected)
 nmap e8         <Plug>(coc-diagnostic-next)
 nmap <S-F8>     <Plug>(coc-diagnostic-prev-error)
@@ -74,5 +74,3 @@ source ~/.dotfile/vim/preference/misc.vim
 
 
 let g:airline_theme='onedark'
-
-

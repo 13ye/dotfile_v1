@@ -8,7 +8,7 @@ func! Change_Python_Edition(ver)
         let g:Compile_Python="python3"
         let g:syntastic_python_python_exec = '/usr/local/bin/python3'
     endif
-endfunc 
+endfunc
 func! Compile_Tex()
 	exec "w"
 	let Compile_Cmd="!latex "
@@ -83,11 +83,10 @@ func! DetectMakeFile()
 		return 1
 	else
 		return 0
-	endif 
+	endif
 endfunc
 
 func! Debug()
 	exec "w"
 	exec "!sudo gdb %<"
-endfunc 
-
+endfunc

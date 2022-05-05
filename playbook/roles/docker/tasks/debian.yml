@@ -1,10 +1,10 @@
 - name: install required packages
   apt:
     pkg:
-     - apt-transport-https 
-     - ca-certificates 
-     - curl 
-     - gnupg2 
+     - apt-transport-https
+     - ca-certificates
+     - curl
+     - gnupg2
      - software-properties-common
 
 - name: add gpg key of docker
@@ -21,9 +21,3 @@
   apt:
     pkg:
      - docker-ce
-
-
-
-    
-    
-

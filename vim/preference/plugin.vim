@@ -23,7 +23,7 @@
 	let g:vim_markdown_override_foldtext = 0
 	let g:vim_markdown_folding_style_pythonic = 1
 	let g:vim_markdown_math = 1
-"Markdown-preview 
+"Markdown-preview
 	let g:mkdp_path_to_chrome = "firefox"
 "YouCompleteMe
 	let g:ycm_global_ycm_extra_conf="~/.vim/.ycm_extra_conf.py"
@@ -86,5 +86,3 @@
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,markdown EmmetInstall
 let g:user_emmet_leader_key='<C-K>'
-
-
