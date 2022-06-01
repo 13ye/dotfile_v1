@@ -11,6 +11,7 @@ alias ga='git add'
 alias dp='docker ps'
 alias dim='docker image'
 alias dims='docker images'
+alias p3='python3'
 
 bindkey \"^P\" up-line-or-beginning-search
 bindkey \"^N\" down-line-or-beginning-search
