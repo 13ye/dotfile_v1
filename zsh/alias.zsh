@@ -8,10 +8,15 @@ alias v=vim
 alias t='tmux new-session -A -s main'
 alias fn='find ./ -name'
 alias ga='git add'
+alias p3='python3'
+
+# docker related
 alias dp='docker ps'
+alias dr='docker run'
+alias dsa='docker start'
+alias dso='docker stop'
 alias dim='docker image'
 alias dims='docker images'
-alias p3='python3'
 
 bindkey \"^P\" up-line-or-beginning-search
 bindkey \"^N\" down-line-or-beginning-search
