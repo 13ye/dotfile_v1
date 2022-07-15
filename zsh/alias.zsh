@@ -9,6 +9,8 @@ alias t='tmux new-session -A -s main'
 alias fn='find ./ -name'
 alias ga='git add'
 alias p3='python3'
+alias ifg='ifconfig'
+alias clr='clear'
 
 # docker related
 alias dp='docker ps'
