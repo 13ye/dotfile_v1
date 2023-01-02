@@ -16,7 +16,7 @@ set helpheight=40
 set background=dark
 
 "colorscheme zellner
-colorscheme desert
+colorscheme default
 
 syntax on
 filetype on
