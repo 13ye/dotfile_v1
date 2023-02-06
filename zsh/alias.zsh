@@ -11,6 +11,8 @@ alias ga='git add'
 alias p3='python3'
 alias ifg='ifconfig'
 alias clr='clear'
+alias cb='cd ..'
+alias cbb='cd ../..'
 
 # docker related
 alias dp='docker ps'
