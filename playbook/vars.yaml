@@ -6,4 +6,4 @@ node_download_url: "https://nodejs.org/dist/{{ node_version }}/{{ node_file }}.t
 nvim_version: v0.8.2
 nvim_download_url: "https://github.com/neovim/neovim/releases/download/{{ nvim_version }}/nvim-linux64.tar.gz"
 socks5_proxy: ""
-golang_version: 1.19.4
+golang_version: 1.20.1

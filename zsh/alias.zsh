@@ -7,17 +7,20 @@ alias vi=vim
 alias v=vim
 alias t='tmux new-session -A -s main'
 alias fn='find ./ -name'
-alias ga='git add'
-alias gcl='git clone'
-alias gpl='git pull'
 alias p3='python3'
 alias ifg='ifconfig'
 alias clr='clear'
 alias cb='cd ..'
 alias cbb='cd ../..'
 
+# git related
+alias ga='git add'
+alias gcl='git clone'
+alias gpl='git pull'
+
 # docker related
 alias dp='docker ps'
+alias de='docker exec'
 alias dr='docker run'
 alias dsa='docker start'
 alias dso='docker stop'
