@@ -16,7 +16,7 @@ set helpheight=40
 set background=dark
 
 " set mouse as normal
-set mouse=n
+"set mouse=n
 
 "colorscheme zellner
 colorscheme default
