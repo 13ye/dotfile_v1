@@ -1,11 +1,10 @@
 - name: install necessary packages
   become: yes
-  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
-  apt:
-    pkg:
+  community.general.pacman:
+    name:
       - curl
       - git
-      - build-essential
+      - base-devel
       - zsh
       - tmux
       - rsync
@@ -13,9 +12,9 @@
       - cloc
       - tree
       - htop
-      - telnet
+      - inetutils
       - net-tools
-      - silversearcher-ag
+      - the_silver_searcher
 
 - name: make sure we have folder to store vim-plug
   file:
