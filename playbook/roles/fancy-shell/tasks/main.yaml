@@ -115,10 +115,17 @@
   register: is_nvim_exists
   ignore_errors: yes
 
+- name: Check is nvim installed
+  stat:
+    path: /tmp/nvim-linux64.tar.gz
+  register: nvim_down_stat
+  ignore_errors: yes
+
 - name: download nvim
   when:
-    - ansible_system  == 'Linux'
+    - ansible_system == 'Linux'
     - is_nvim_exists.rc != 0
+    - not nvim_down_stat.stat.exists
   get_url:
     dest: /tmp/nvim-linux64.tar.gz
     url: "{{ nvim_download_url }}"
