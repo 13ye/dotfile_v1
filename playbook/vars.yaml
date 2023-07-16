@@ -1,9 +1,9 @@
 pyenv_download_url: https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer
 v2ray_download_url: http://publicstatic.cnworkshop.xyz/latest/v2ray-linux-64.zip
-node_version: v16.17.1
+node_version: v18.16.1
 node_file: node-{{ node_version }}-linux-x64
 node_download_url: "https://nodejs.org/dist/{{ node_version }}/{{ node_file }}.tar.gz"
-nvim_version: v0.6.1
+nvim_version: v0.9.1
 nvim_download_url: "https://github.com/neovim/neovim/releases/download/{{ nvim_version }}/nvim-linux64.tar.gz"
 socks5_proxy: ""
-golang_version: 1.20.1
+golang_version: 1.20.6
