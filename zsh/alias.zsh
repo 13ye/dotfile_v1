@@ -12,7 +12,7 @@ alias ifg='ifconfig'
 alias clr='clear'
 alias cb='cd ..'
 alias cbb='cd ../..'
-alias curlol='curl -OL'
+alias clol='curl -OL'
 
 # git related
 alias ga='git add'
