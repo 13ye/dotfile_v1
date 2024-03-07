@@ -14,6 +14,9 @@ alias cb='cd ..'
 alias cbb='cd ../..'
 alias clol='curl -OL'
 
+# frontend related
+alias ppm='pnpm'
+
 # git related
 alias ga='git add'
 alias gcl='git clone'
@@ -27,6 +30,7 @@ alias dsa='docker start'
 alias dso='docker stop'
 alias dim='docker image'
 alias dims='docker images'
+alias dkrm='docker rm'
 
 bindkey \"^P\" up-line-or-beginning-search
 bindkey \"^N\" down-line-or-beginning-search
