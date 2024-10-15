@@ -13,6 +13,7 @@ alias clr='clear'
 alias cb='cd ..'
 alias cbb='cd ../..'
 alias clol='curl -OL'
+alias mk='make'
 
 # frontend related
 alias ppm='pnpm'
