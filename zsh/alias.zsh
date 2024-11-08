@@ -14,6 +14,7 @@ alias cb='cd ..'
 alias cbb='cd ../..'
 alias clol='curl -OL'
 alias mk='make'
+alias m8='make -j8'
 
 # frontend related
 alias ppm='pnpm'
